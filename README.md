@@ -27,6 +27,9 @@ Check below examples, all of them show ok :).
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl2.PNG)
 
 <br><br>
+
+
+![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl3.PNG)
 First thing we have to do here is copy mask from A1 to B1. Then using B1 IP and correct mask we can calculate number of hosts avaliable in this network. Take a look here: <br>
 <br>11111111.11111111.11111111.11100000 - MASK (also can be written as /27, that is how many bits belongs to network (they are nr 1))
 <br>11000000.10101000.01110000.110|11100 - | shows you values that can be changed in this addres. If you count we have 31 addreses. The 1st one (network addres) is .192 the last one is .223. So host min is 193 and host max is 222.
@@ -35,20 +38,24 @@ On the other example you can see /30, that means .11111100. This means you have 
 
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl2.PNG)
 <br><br>
+![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl3.PNG)
+<br><br>
 Here the new element is coming - it is a switch. Before we had 2 computers, but imagine you want to create network of 10 or 200 of them. You would need to have corresponding number of ports in each of your computers to contect all of them with each other. So people invented HUBs and SWITCHes. According to my knowledge Switches are smarter, this means if a message is sent from computer A to computer C Switch knows it and pass it only to computer C, while HUB would forward it to all computers. What would happen next is that the computer(s) that MAC address is not the destination would deny the packet. Still only the destination would accept it but it creates unnecesary traffic. Switches are smart and they have ARP tables that 
 <br><br>
 So switch is layer 2 device (this in simple words means it operates only inside the network, [router is layer 3 device it connects networks]).
 <br><br>
-Let us talk yet about ARP (Adres Resolution Protocol) Table and MAC Table and how the packet travel across the network.
+Let us talk yet about ARP (Adres Resolution Protocol) and MAC Tables and how the packet travel across the network.
 <br><br>
-HOST A wants to communicate with HOST C. HOST A very likely knows all the IP addreses inside its own network (they could be put to any computer by network administrator) but it doesnt know MAC addresses. MAC addres is a unique addres of any device - computer, phone etc. It needs to know this information to create L2 packet (layer 2 packet) that contains of source MAC addres and destination MAC addres. So host a will send a broadcast message to every computer asking "are you 104.198.121.123? If yes give me your MAC addres. It will be answered back only by HOST C and ignored by HOST B.
+HOST A wants to communicate with HOST C. HOST A very likely knows all the IP addreses inside its own network (they could be put to any computer by network administrator) but it doesnt know MAC addresses. MAC addres is a unique addres of any device - computer, phone etc. It needs to know this information to create L2 packet (layer 2 packet) that contains of source MAC addres and destination MAC addres. So host a will send a broadcast message to every computer asking "are you 104.198.121.123? If yes give me your MAC addres. It will be answered back only by HOST C and ignored by HOST B. Once it knows HOST C mac address it will save it next to its IP in ARP table. Once packet arrives to HOST C, HOST C will save HOST's A MAC addres so in the future they can comunicate quicker. 
+<br><br>
+When the informacion is passing back and forth via Switch it saves MAC addreses in MAC table. For instance HOST A is connected to Port 1 HOST B is connected to Port 2 and HOST C is connected to Port 3, MAC table will save that to Port 1 is connected MAC addres aaaa.aaaa.aaaa and to Port 3 cccc.cccc.cccc.
+<br><br>
+Enough for now.
+<br>
+The task here is easy. You have given mask and IP and you must put them in the same network. Good luck!
 
 
-MAC it is sort of database inside switch that matches output ports with MAC addreses of the connected device. When for the first time packet passes from HOST A to any host the Switch will save this entry MAC address knowin that port nr 1 corresponds to MAC address aaaa.aaaa.aaaa. When 
 
-
-![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl3.PNG)
--
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl3.PNG)
 -
 -
