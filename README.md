@@ -2,9 +2,9 @@
 Establishing network adresses, ARP table, Route table, TCP/IP packets
 
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl1.PNG)
-<br>
+<br><br>
 So the first example is very imporatant. There are 2 sets of computers, both connected to each other directly. Let us focus on the left set.
-<br>
+<br><br>
 Take look at the client B computer. There is IP and Mask. Both are grey-ish, that means those values are fixed.
 <br>
 Let us start from IPv4. What is that?
