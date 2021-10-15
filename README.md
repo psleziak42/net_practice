@@ -27,9 +27,6 @@ Check below examples, all of them show ok :).
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl2.PNG)
 
 <br><br>
-
-
-![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl3.PNG)
 First thing we have to do here is copy mask from A1 to B1. Then using B1 IP and correct mask we can calculate number of hosts avaliable in this network. Take a look here: <br>
 <br>11111111.11111111.11111111.11100000 - MASK (also can be written as /27, that is how many bits belongs to network (they are nr 1))
 <br>11000000.10101000.01110000.110|11100 - | shows you values that can be changed in this addres. If you count we have 31 addreses. The 1st one (network addres) is .192 the last one is .223. So host min is 193 and host max is 222.
@@ -54,18 +51,18 @@ Enough for now.
 <br>
 The task here is easy. You have given mask and IP and you must put them in the same network. Good luck!
 
-
-
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl3.PNG)
--
--
+<br> ------------------------------------------------------------------------------------------------------------------------------------------------------- <br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl4.PNG)
--
+<br><br>
+New element: Router. Router is layer 3 device that is used to connect different networks together (or subnetworks). Routers have multiple entrances and each entry must be places within the same network (have addres IP on the same scope as other components). Anything between routers or on their ends is called LAN - local area network. Hence on this example we have LAN.
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl4.PNG)
--
--
+<br> ------------------------------------------------------------------------------------------------------------------------------------------------------- <br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl5.PNG)
--
+<br><br>
+Here we have one router and 2 LANs. As you can see on the picture below, I marked some elements - they are routing tables. The way it works is that 1. is the destination network and 2 is the exit gateway of the network. Whenever computer creates L3 packet it can say by its network addres and mask if it belongs to his network or foreign network. If it belongs to foreing network it knows imidiatelly that it must be forwarded towards gateway ( talk about obtaining mac adreses and what router sees (directly conected).
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl5.PNG)
 -
 -
