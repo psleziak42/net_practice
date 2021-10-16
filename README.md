@@ -88,7 +88,16 @@ Understand that its real life example when you establish real network and you mu
 -
 -
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl8.PNG)
--
+<br><br>
+Here Interface C must communicate with D and both with internet.
+Here you have to take a look below on the image and focus on nr 1. It is similar to what we have described before. 
+<br><br>
+Nr 1 says any message for network 22.67.67.0/26 will be forwarded to router R12, IP 163.180.250.12. What it tells us? On the bottom we have Interface D1 and Interface C1. They are 2 different networks - so can't have the same addreses - and they addreses must fit inside 22.67.67.0/26 network. We must simply subnet the networkwe have and create smaller networks inside 22.67.67.0/26. The mask given on D is .240 on C we can choose so i have chosen .252 as we only have 2 devices. I decided that starting addres on D will be 1 so with .240 mask the broadcast will be 15. So on D network the lowest addres we can choose is 17, because 16 will be network addres.
+<br><br>
+
+<br><br>
+<br><br>
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl8.PNG)
 -
 -
