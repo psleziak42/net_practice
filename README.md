@@ -92,20 +92,44 @@ Understand that its real life example when you establish real network and you mu
 Here Interface C must communicate with D and both with internet.
 Here you have to take a look below on the image and focus on nr 1. It is similar to what we have described before. 
 <br><br>
-Nr 1 says any message for network 22.67.67.0/26 will be forwarded to router R12, IP 163.180.250.12. What it tells us? On the bottom we have Interface D1 and Interface C1. They are 2 different networks - so can't have the same addreses - and they addreses must fit inside 22.67.67.0/26 network. We must simply subnet the networkwe have and create smaller networks inside 22.67.67.0/26. The mask given on D is .240 on C we can choose so i have chosen .252 as we only have 2 devices. I decided that starting addres on D will be 1 so with .240 mask the broadcast will be 15. So on D network the lowest addres we can choose is 17, because 16 will be network addres.
+Nr 1 says any message for network 22.67.67.0/26 will be forwarded to router R12, IP 163.180.250.12. What it tells us? On the bottom we have Interface D1 and Interface C1. They are 2 different networks - so can't have the same addreses - and they addreses must fit inside 22.67.67.0/26 network. We must simply subnet the networkwe have and create smaller networks inside 22.67.67.0/26. The mask given on D is .240 on C we can choose so i have chosen .252 as we only have 2 devices. I decided that starting addres on D will be 1 so with .240 (4) mask the broadcast will be 15. So on D network the lowest addres we can choose is 17 (5), because 16 will be network addres. Then nr 3 IP is .62 because nr 2 it says that whenever we want to reach it will be forwarded to 22.67.67.62. I used /30 mask and add addres .61 to R21.
 <br><br>
-
+0.0.0.0/0 or default. Take a look on C1 and D1 Routes (routing table). The tasks asks us that C1 must communicate with D1 and with internet. Because we have only one position in the routing table we say that default network we want to reach we will forwart the packet to the gateway. In following exercices you gonna have bigger routing table and you will be able to manually forward trafic towards network you want. I hope it is understandable :).
 <br><br>
+Also I think that there is an error on R1 routing table. It says 0.0.0.0/0 is forwarded to 163.180.250.1 when the Interface R12 is .12. The white space we fill saying: whatever goes to 22.67.67.0/26 will hop to 22.67.67.61.
 <br><br>
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl8.PNG)
 -
 -
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl9.PNG)
--
+<br><br>
+This level and level 10 i will leave for you to do. You must apply all the knowledge together and it should not be a big deal anymore.
+<br><br>
+One thing worth to mention here is: take a look on differences between private and public IPs. Private IPs are used only within network, so devices that belongs to to it can communicate with each oth
+
+    Class A: 10.0.0.0 — 10.255.255.255
+
+    Class B: 172.16.0.0 — 172.31.255.255 
+
+    Class C: 192.168.0.0 — 192.168.255.255 
+er directly. It can be seen only by other devices on that network. Depending on the class (class A mask is 255.0.0.0, B 255.255.0.0 and C 255.255.255.0) the private IPs are as follows: A 10.0.0.0 - 10.255.255.255; B 172.16.0.0 - 172.31.255.255 and C 192.168.0.0 - 192.168.255.255. It seems there is not much of them but they are reused in every internal network. So my computer in my network will have one of this C 192.168.0.0 - 192.168.255.255 and your computher may have the same.
+<br><br>
+What cannot be duplicated is public IP addres. And usually the devices inside the network have private unique IPs and outside the network each network has one public IP where from and to the internet traffic is sent. This is a response to shortage of IPv4 addreses. There is too many devices and engineers are slowly substituing it with IPv6 that has billions and billions and billions and billions addreses.
+<br><br>
+
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl9.PNG)
 -
 -
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl10.PNG)
--
+<br><br>
+SOME USEFUL LINKS to understand the project:
+<br>IP calculator: http://jodies.de/ipcalc?host=22.67.67.17&mask1=255.255.255.252&mask2=
+<br>Packet Travel: https://www.youtube.com/watch?v=rYodcvhh7b8&t=32s
+<br>ARP table:     https://www.youtube.com/watch?v=cn8Zxh9bPio
+<br>Public/Private IP, NAT: https://www.youtube.com/watch?v=FTUV0t6JaDA
+<br><br>
+Thank you! I hope you found it usefull. I had enjoyed this project a lot but had some difficulties to understand it since the beginning. Because the program at 42 have changed, most of my friends had done another exercice related to System Administration, and I decided to write this tutorial as I think i am the 1st student at 42 Lisbon who had to face it and I could not find much info on github.
+<br><br>
+If there is anything you did not get from this explanation then try to send me a message on slack. If you liked you can star my repo, whatever it means, so I can have some feedback that it helped to anyone and I can think in the future to write further explanation from time to time :).
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl10.PNG)
