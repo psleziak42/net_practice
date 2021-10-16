@@ -68,6 +68,7 @@ There is one thing I wanted to mention - router has its own routing table. Here 
 In this example we have LAN on the right side and Internet on the left side. Starting from the left, everything that goes towards network 50.237.137.128/25 (see picture with solution if you cant find it ;)) is forwarded to gate 163.172.250.12. IP in the LAN must belong to this network 50.237.137.128/25. I used here red circle because in my opinion this routing table is not necesary here. Router is directly connected to the network 55.237.127.128/25 so he knows where to forward traffic. Even if there were many other networks connected it would have them on its routing table knowing where trafic goes. This is useful if router cannot see the network and needs to do so called "hoop" to another router to reach its destination. You will see it in the next level.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl6.PNG)
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl7.PNG)
 <br><br>
 We have 3 LANs here. Let us call it LAN A1 and LAN C1 and LAN R (between routers it is also LAN even if there is no other computers connected). 
@@ -79,6 +80,7 @@ On the way back then C1 must speak to A1 "hey i have receive the packet" so we h
 Understand that its real life example when you establish real network and you must manually put into router's routing table informations so he knows what to do. As said somewhere before it is called static routing table, there exists also dynamic routing tables that fill this information automatically.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl7.PNG)
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl8.PNG)
 <br><br>
 Here Interface C must communicate with D and both with internet.
@@ -92,6 +94,7 @@ Also I think that there is an error on R1 routing table. It says 0.0.0.0/0 is fo
 <br><br>
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl8.PNG)
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl9.PNG)
 <br><br>
 This level and level 10 i will leave for you to do. You must apply all the knowledge together and it should not be a big deal anymore.
@@ -101,6 +104,7 @@ One thing worth to mention here is: take a look on differences between private a
 What cannot be duplicated is public IP addres. And usually the devices inside the network have private unique IPs and outside the network each network has one public IP where from and to the internet traffic is sent. This is a response to shortage of IPv4 addreses. There is too many devices and engineers are slowly substituing it with IPv6 that has billions and billions and billions and billions addreses.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl9.PNG)
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl10.PNG)
 <br><br>
 SOME USEFUL LINKS to understand the project:
