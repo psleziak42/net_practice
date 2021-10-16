@@ -52,14 +52,18 @@ The task here is easy. You have given mask and IP and you must put them in the s
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl3.PNG)
 <br> ------------------------------------------------------------------------------------------------------------------------------------------------------- <br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl4.PNG)
-<br><br>
-New element: Router. Router is layer 3 device that is used to connect different networks together (or subnetworks). Routers have multiple entrances and each entry must be places within the same network (have addres IP on the same scope as other components). Anything between routers or on their ends is called LAN - local area network. Hence on this example we have LAN.
+<br>
+<br>
+New element: Router. Router is layer 3 device that is used to connect different networks together (or subnetworks). Routers have multiple entrances and each entry must be placed within the same network (have addres IP on the same scope as other components). Anything between routers or on their ends is called LAN - local area network. Hence on this example we have LAN.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl4.PNG)
 <br> ------------------------------------------------------------------------------------------------------------------------------------------------------- <br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl5.PNG)
-<br><br>
-Here we have one router and 2 LANs. As you can see on the picture below, I marked some elements - they are routing tables. The way it works is that 1. is the destination network and 2 is the exit gateway of the network. Whenever computer creates L3 packet it can say by its network addres and mask if it belongs to his network or foreign network. If it belongs to foreing network it knows imidiatelly that it must be forwarded towards gateway ( talk about obtaining mac adreses and what router sees (directly conected).
+<br>
+<br>
+Here we have one router and 2 LANs. As you can see on the picture below, I marked some elements - they are routing tables. The way it works is that 1. is the destination network and 2 is the exit gateway of the network. Whenever computer computer gets the destination IP it can say by its network addres and mask if it belongs to his network or foreign network. If it belongs to foreing network it knows imidiatelly that it must be forwarded towards gateway. So first, if the ARP table is empty CLIENT A must obtain MAC addres from gateway, so later it can create Layer3 packet and forward it to neighbour network.
+
+There is one thing I wanted to mention - router has its own routing table. Here 2 networks are directly connected and he sees them. But on the 7th example there will be 2 routers and we will have to manually fill its routing table :)
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl5.PNG)
 -
