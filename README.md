@@ -15,7 +15,7 @@ What is mask? In the simple words it tells us what values can be changed in IP a
 <br><br>
 Now let us compare both IPs: 104.63.23.12 and 104.93.23.307. 104.63.23.12 - this IP is fixed, so we need to properly adjust IP in the Interface A1. This computers are in the same network, it seems like they are connected directly via cable. So the network part of both adresses must be the same, hence Interface A1 IP needs to start with 104.63.23.__ and __ can be substitued in this example with any value from 1 to 254, except 12 because this adress is already taken by client B.
 <br><br>
-In Client D - Client C example the mask is 255.255.0.0. That means 211.191.0.0 is the network adress and only this part has to be the same in both computers. Client D IP must then start with 211.191."__"."___" and the values __ can be anything from 1 to 255 and ___ from 1 to 254. Remember last addres of the network is always used for Broadcast!
+In Client D - Client C example the mask is 255.255.0.0. That means 211.191.0.0 is the network adress and only this part has to be the same in both computers. Client D IP must then start with 211.191.(__).(___) and the values __ can be anything from 1 to 255 and ___ from 1 to 254. Remember last addres of the network is always used for Broadcast!
 <br><br>
 Check below examples, all of them show ok :).
 <br><br>
