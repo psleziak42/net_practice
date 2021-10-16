@@ -25,7 +25,6 @@ Check below examples, all of them show ok :).
 <br>
 <br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl2.PNG)
-
 <br><br>
 First thing we have to do here is copy mask from A1 to B1. Then using B1 IP and correct mask we can calculate number of hosts avaliable in this network. Take a look here: <br>
 <br>11111111.11111111.11111111.11100000 - MASK (also can be written as /27, that is how many bits belongs to network (they are nr 1))
@@ -62,14 +61,16 @@ New element: Router. Router is layer 3 device that is used to connect different 
 <br>
 <br>
 Here we have one router and 2 LANs. As you can see on the picture below, I marked some elements - they are routing tables. The way it works is that 1. is the destination network and 2 is the exit gateway of the network. Whenever computer computer gets the destination IP it can say by its network addres and mask if it belongs to his network or foreign network. If it belongs to foreing network it knows imidiatelly that it must be forwarded towards gateway. So first, if the ARP table is empty CLIENT A must obtain MAC addres from gateway, so later it can create Layer3 packet and forward it to neighbour network.
-
+<br><br>
 There is one thing I wanted to mention - router has its own routing table. Here 2 networks are directly connected and he sees them. But on the 7th example there will be 2 routers and we will have to manually fill its routing table :)
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl5.PNG)
 -
 -
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl6.PNG)
--
+<br><br>
+In this example we have LAN on the right side and Internet on the left side. Starting from the left, everything that goes towards network 50.237.137.128/25 (see picture with solution if you cant find it ;)) is forwarded to gate 163.172.250.12. IP in the LAN must belong to this network 50.237.137.128/25. I used here red circle because in my opinion this routing table is not necesary here. Router is directly connected to the network 55.237.127.128/25 so he knows where to forward traffic. Even if there were many other networks connected it would have them on its routing table knowing where trafic goes. This is useful if router cannot see the network and needs to do so called "hoop" to another router to reach its destination. You will see it in the next level.
+<br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl6.PNG)
 -
 -
