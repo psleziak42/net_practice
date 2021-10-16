@@ -37,9 +37,7 @@ On the other example you can see /30, that means .11111100. This means you have 
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl3.PNG)
 <br><br>
-Here the new element is coming - it is a switch. Before we had 2 computers, but imagine you want to create network of 10 or 200 of them. You would need to have corresponding number of ports in each of your computers to contect all of them with each other. So people invented HUBs and SWITCHes. According to my knowledge Switches are smarter, this means if a message is sent from computer A to computer C Switch knows it and pass it only to computer C, while HUB would forward it to all computers everytime. What would happen next is that the computer(s) that MAC address is not the destination would deny the packet. Still only the destination would accept it but it creates unnecesary traffic. Switches are smart and they have ARP tables that 
-<br><br>
-So switch is layer 2 device (this in simple words means it operates only inside the network, [router is layer 3 device it connects networks]).
+Here the new element is coming - it is a switch. So switch is layer 2 device (this in simple words means it operates only inside the network, [router is layer 3 device it connects networks]). Before we had 2 computers, but imagine you want to create network of 10 or 200 of them. You would need to have corresponding number of ports in each of your computers to contect all of them with each other. So people invented HUBs and SWITCHes. According to my knowledge Switches are smarter, this means if a message is sent from computer A to computer C Switch knows it and pass it only to computer C, while HUB would forward it to all computers everytime. What would happen next is that the computer(s) that MAC address is not the destination would deny the packet. Still only the destination would accept it but it creates unnecesary traffic.
 <br><br>
 Let us talk yet about ARP (Adres Resolution Protocol) and MAC Tables and how the packet travel across the network.
 <br><br>
