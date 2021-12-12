@@ -22,8 +22,8 @@ Check below examples, all of them show ok :).
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl1.PNG)
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl1.1.PNG)
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl1.2.PNG)
-<br>
-<br>
+
+# Level 2
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl2.PNG)
 <br><br>
 First thing we have to do here is copy mask from A1 to B1. Then using B1 IP and correct mask we can calculate number of hosts avaliable in this network. Take a look here: <br>
@@ -32,7 +32,8 @@ First thing we have to do here is copy mask from A1 to B1. Then using B1 IP and 
 <br><br>
 On the other example you can see /30, that means .11111100. This means you have only 3 addreses to assign. To fulfill the exercice you can choose any other addres than 127.0.0.1 because any addres starting from 127 is special addres and serves as a loopback and it is used to test network cards. Read more about it somewhere in the internet :).
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl2.PNG)
-<br><br>
+
+# Level 3
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl3.PNG)
 <br><br>
 Here the new element is coming - it is a switch. So switch is layer 2 device (this in simple words means it operates only inside the network, [router is layer 3 device it connects networks]). Before we had 2 computers, but imagine you want to create network of 10 or 200 of them. You would need to have corresponding number of ports in each of your computers to contect all of them with each other. So people invented HUBs and SWITCHes. According to my knowledge Switches are smarter, this means if a message is sent from computer A to computer C Switch knows it and pass it only to computer C, while HUB would forward it to all computers everytime. What would happen next is that the computer(s) that MAC address is not the destination would deny the packet. Still only the destination would accept it but it creates unnecesary traffic.
@@ -47,14 +48,16 @@ Enough for now.
 <br>
 The task here is easy. You have given mask and IP and you must put them in the same network. Good luck!
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl3.PNG)
-<br><br>
+
+# Level 4
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl4.PNG)
 <br>
 <br>
 New element: Router. Router is layer 3 device that is used to connect different networks together (or subnetworks). Routers have multiple entrances and each entry must be placed within the same network (have addres IP on the same scope as other components). Anything between routers or on their ends is called LAN - local area network. Hence on this example we have LAN.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl4.PNG)
-<br><br>
+
+# Level 5
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl5.PNG)
 <br>
 <br>
@@ -63,12 +66,15 @@ Here we have one router and 2 LANs. As you can see on the picture below, I marke
 There is one thing I wanted to mention - router has its own routing table. Here 2 networks are directly connected and he sees them. But on the 7th example there will be 2 routers and we will have to manually fill its routing table :)
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl5.PNG)
+
+# Level 6
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl6.PNG)
 <br><br>
 In this example we have LAN on the right side and Internet on the left side. Starting from the left, everything that goes towards network 50.237.137.128/25 (see picture with solution if you cant find it ;)) is forwarded to gate 163.172.250.12. IP in the LAN must belong to this network 50.237.137.128/25. I used here red circle because in my opinion this routing table is not necesary here. Router is directly connected to the network 55.237.127.128/25 so he knows where to forward traffic. Even if there were many other networks connected it would have them on its routing table knowing where trafic goes. This is useful if router cannot see the network and needs to do so called "hoop" to another router to reach its destination. You will see it in the next level.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl6.PNG)
-<br><br>
+
+# Level 7
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl7.PNG)
 <br><br>
 We have 3 LANs here. Let us call it LAN A1 and LAN C1 and LAN R (between routers it is also LAN even if there is no other computers connected). 
@@ -80,7 +86,8 @@ On the way back then C1 must speak to A1 "hey i have receive the packet" so we h
 Understand that its real life example when you establish real network and you must manually put into router's routing table informations so he knows what to do. As said somewhere before it is called static routing table, there exists also dynamic routing tables that fill this information automatically.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl7.PNG)
-<br><br>
+
+# Level 8
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl8.PNG)
 <br><br>
 Here Interface C must communicate with D and both with internet.
@@ -94,7 +101,8 @@ Also I think that there is an error on R1 routing table. It says 0.0.0.0/0 is fo
 <br><br>
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl8.PNG)
-<br><br>
+
+# Level 9
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl9.PNG)
 <br><br>
 This level and level 10 i will leave for you to do. You must apply all the knowledge together and it should not be a big deal anymore.
@@ -104,7 +112,8 @@ One thing worth to mention here is: take a look on differences between private a
 What cannot be duplicated is public IP addres. And usually the devices inside the network have private unique IPs and outside the network each network has one public IP where from and to the internet traffic is sent. This is a response to shortage of IPv4 addreses. There is too many devices and engineers are slowly substituing it with IPv6 that has billions and billions and billions and billions addreses.
 <br><br>
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/lvl9.PNG)
-<br><br>
+
+# Level 10
 ![alt text](https://github.com/psleziak42/net_practice/blob/main/screens/0lvl10.PNG)
 <br><br>
 SOME USEFUL LINKS to understand the project:
